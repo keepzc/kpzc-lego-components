@@ -1,10 +1,10 @@
-const basicConfig = require('./rollup.config')
+import basicConfig,{name, file} from './rollup.config'
 
 module.exports = {
     ...basicConfig,
     output: {
-        name: basicConfig.name,
-        file: basicConfig.file('umd'),
+        name: name,
+        file: file('umd'),
         format: 'umd'
     }
 };

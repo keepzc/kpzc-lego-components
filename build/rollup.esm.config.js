@@ -1,9 +1,10 @@
-const basicConfig = require('./rollup.config')
-module.exports = {
+import basicConfig, { name, file } from './rollup.config'
+console.log(file)
+export default {
     ...basicConfig,
     output: {
-        name: basicConfig.name,
-        file: basicConfig.file('esm'),
+        name: name,
+        file: file('esm'),
         format: 'es'
     }
 };

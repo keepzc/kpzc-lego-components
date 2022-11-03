@@ -1,9 +1,10 @@
-
-const vue = require('rollup-plugin-vue')
-const css = require('rollup-plugin-css-only')
-const typescript = require('rollup-plugin-typescript2')
-const { nodeResolve } = require('@rollup/plugin-node-resolve')
-const { name } = require('../package.json') 
+import vue from 'rollup-plugin-vue'
+import css  from 'rollup-plugin-css-only'
+import  typescript from 'rollup-plugin-typescript2'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const config = require('../package.json')
+const { name } = config
 const overrides ={
     compilerOptions: {
         declaration: true,
@@ -14,10 +15,11 @@ const overrides ={
         "src/main.ts"
     ]
 }
-const file = type => `dist/${name}.${type}.js`
-exports.file = file
-exports.name = name
-module.exports = {
+const file = type => `dist/${config.name}.${type}.js`
+ 
+export { name, file }
+ 
+export default {
     input: 'src/index.ts',
     output: {
         name,

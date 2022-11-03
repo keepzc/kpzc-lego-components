@@ -1,5 +1,5 @@
 import basicConfig, { name, file } from './rollup.config'
-console.log(file)
+
 export default {
     ...basicConfig,
     output: {

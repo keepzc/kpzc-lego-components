@@ -2,6 +2,9 @@
   "name": "kpzc-lego-components",
   "version": "1.0.0",
   "private": true,
+  "main": "dist/kpzc-lego-components.umd.js",
+  "module": "dist/kpzc-lego-components.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",

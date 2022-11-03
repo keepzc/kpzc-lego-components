@@ -1,10 +1,16 @@
-import basicConfig,{name, file} from './rollup.config'
+import basicConfig,{ file } from './rollup.config'
 
-module.exports = {
+export default {
     ...basicConfig,
     output: {
-        name: name,
+        name: 'KlegoComponents',
         file: file('umd'),
-        format: 'umd'
+        format: 'umd',
+        globals: {
+            'vue': 'Vue',
+            'lodash-es': '_'
+        },
+        exports: 'named'
     }
-};
+    
+}

@@ -13,11 +13,11 @@
 <script lang="ts">
 import { defineComponent, getCurrentInstance, onMounted, inject } from 'vue';
 export interface TestProps {
-  name: string
+  name: string;
 }
 export default defineComponent({
   name: 'App',
-  setup(props) {
+  setup() {
     console.log(inject('test'))
 
     onMounted(() => {

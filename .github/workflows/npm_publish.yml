@@ -1,0 +1,26 @@
+name: 自动部署组件库到npm
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish-release:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout 代码
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          #设置发包 npm仓库地址
+          registry-url: https://registry.npmjs.com
+      #安装依赖
+      - name: 安装依赖
+        run: npm install
+      #执行构建步骤
+      - name: 构建
+        run: |
+          npm run build
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

@@ -1,10 +1,11 @@
 {
   "name": "kpzc-lego-components",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "main": "dist/kpzc-lego-components.umd.js",
   "module": "dist/kpzc-lego-components.esm.js",
   "types": "dist/index.d.ts",
+  "author": "keepzc",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
@@ -13,6 +14,9 @@
     "build:umd": "rollup --config build/rollup.umd.config.js",
     "clean": "rimraf ./dist"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.21"
@@ -41,5 +45,16 @@
   },
   "peerDependencies": {
     "vue": "^3.0.0"
+  },
+  "homepage": "https://github.com/keepzc/kpzc-lego-components",
+  "keywords": [
+    "Component",
+    "UI",
+    "Vue3"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keepzc/kpzc-lego-components"
   }
 }

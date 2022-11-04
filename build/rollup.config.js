@@ -9,11 +9,7 @@ const overrides ={
     compilerOptions: {
         declaration: true,
     },
-    exclude:[
-        "node_modules",
-        "src/App.vue",
-        "src/main.ts"
-    ]
+    exclude: ["tests/**/*.ts", "tests/**/*.tsx"]
 }
 const file = type => `dist/${config.name}.${type}.js`
  

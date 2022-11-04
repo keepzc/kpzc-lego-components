@@ -95,6 +95,7 @@ export const isEditingProps = {
         default: false
     }
 }
+export type AllComponentProps = TextComponentProps & ImageComponentProps & ShapeComponentProps
 export const textStylePropNames = without(Object.keys(textDefaultProps), "actionType", "url", "text")
 export const imageStylePropsNames = without(Object.keys(imageDefaultProps), "src")
 export const shapeStylePropsNames = without(Object.keys(imageDefaultProps), 'actionType', 'url')

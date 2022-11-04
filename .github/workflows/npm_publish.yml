@@ -1,7 +1,9 @@
-name: Publish Package to npmjs
+name: 自动部署npm包
+# 特定的 tags被 push的时候触发
 on:
   push:
-    branches: [master]
+    tags:
+      - 'v*.*.*'
 jobs:
   build:
     runs-on: ubuntu-latest

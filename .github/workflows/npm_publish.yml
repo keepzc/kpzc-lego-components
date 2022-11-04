@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 16
           #设置发包 npm仓库地址
-          registry-url: https://registry.npmjs.com
+          registry-url: https://www.npmjs.com/package/kpzc-lego-components
       #安装依赖
       - name: 安装依赖
         run: npm install

@@ -70,7 +70,7 @@ const transformToComponentProps = (props) => {
 const useComponentCommon = (props, picks) => {
     const styleProps = computed(() => pick(props, picks));
     const handleClick = () => {
-        if (props.actionType === "url" && props.url) {
+        if (props.actionType === "url" && props.url && !props.isEditing) {
             window.location.href = props.url;
         }
     };
@@ -200,4 +200,4 @@ var index = {
     install
 };
 
-export { script$1 as LImage, script as LShape, script$2 as LText, index as default, install };
+export { script$1 as LImage, script as LShape, script$2 as LText, index as default, imageDefaultProps, imageStylePropsNames, install, shapeDefaultProps, shapeStylePropsNames, textDefaultProps, textStylePropNames };

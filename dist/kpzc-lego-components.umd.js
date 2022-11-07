@@ -73,7 +73,7 @@
     const useComponentCommon = (props, picks) => {
         const styleProps = vue.computed(() => lodashEs.pick(props, picks));
         const handleClick = () => {
-            if (props.actionType === "url" && props.url) {
+            if (props.actionType === "url" && props.url && !props.isEditing) {
                 window.location.href = props.url;
             }
         };
@@ -207,7 +207,13 @@
     exports.LShape = script;
     exports.LText = script$2;
     exports["default"] = index;
+    exports.imageDefaultProps = imageDefaultProps;
+    exports.imageStylePropsNames = imageStylePropsNames;
     exports.install = install;
+    exports.shapeDefaultProps = shapeDefaultProps;
+    exports.shapeStylePropsNames = shapeStylePropsNames;
+    exports.textDefaultProps = textDefaultProps;
+    exports.textStylePropNames = textStylePropNames;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -46,6 +46,7 @@ export declare const isEditingProps: {
         default: boolean;
     };
 };
+export declare type AllComponentProps = TextComponentProps & ImageComponentProps & ShapeComponentProps;
 export declare const textStylePropNames: string[];
 export declare const imageStylePropsNames: string[];
 export declare const shapeStylePropsNames: string[];

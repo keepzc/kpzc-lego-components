@@ -80,7 +80,9 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
 }, {
-    styleProps: import("vue").ComputedRef<Partial<Readonly<Partial<import("../../defaultProps").TextComponentProps>>>>;
+    styleProps: import("vue").ComputedRef<Partial<Readonly<Partial<import("../../defaultProps").CommonComponentProps & {
+        isEditing: boolean;
+    }>>>>;
     handleClick: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     backgroundColor: {
